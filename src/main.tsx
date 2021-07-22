@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./components/basic/home/Home";
 import "./assets/style/normalize.css";
 import "./assets/style/main.css";
+import Entry from "./components/Entry";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Home />
+    <Entry />
   </React.StrictMode>,
   document.getElementById("root")
 );

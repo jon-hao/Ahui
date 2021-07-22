@@ -36,7 +36,7 @@ export enum Shadow {
   Normal = "0 2px 6px rgb(33 33 38 / 20%);",
   Down1 = "0px 1px 2px -2px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09)",
   Down2 = "0px 3px	6px	-4px rgba(0, 0, 0, 0.12), 0px 6px	16px	0px rgba(0, 0, 0, 0.08), 0px 9px	28px	8px rgba(0, 0, 0, 0.05)",
-  Down3 = "0px 6px	16px -8px rgba(0, 0, 0, 0.08), 0px 9px	28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03)"
+  Down3 = "0px 6px	16px -8px rgba(0, 0, 0, 0.08), 0px 9px	28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03)",
 }
 
 export enum FontSize {
@@ -64,5 +64,5 @@ export enum Media {
 }
 
 export enum Width {
-  Max = "1140px"
+  Max = "1140px",
 }
