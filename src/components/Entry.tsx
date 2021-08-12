@@ -5,7 +5,7 @@ import { EntryWrapper } from "./Entry.style";
 import { PagePath } from "../constants/page";
 import { filter, map } from "lodash";
 import pagesConfig from "../config/route";
-import { LanguageProvider } from "./common/LanguageContext";
+import { LanguageProvider } from "./common/context/LanguageContext";
 
 const history = createBrowserHistory();
 

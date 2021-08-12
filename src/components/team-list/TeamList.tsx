@@ -3,7 +3,8 @@ import { TeamListWrapper } from "./TeamList.style";
 import useTeamList from "./hooks/useTeamList";
 import { Filter } from "./types/param";
 import { map } from "lodash";
-import { LanguageContext } from "../common/LanguageContext";
+import { LanguageContext } from "../common/context/LanguageContext";
+import Card from "../common/card/Card";
 
 const TeamList: React.FC<any> = () => {
   const { t } = useContext(LanguageContext);
@@ -12,14 +13,18 @@ const TeamList: React.FC<any> = () => {
 
   return (
     <TeamListWrapper>
-      <div className="search">Search</div>
-      <div className="filter-bar">Filter</div>
+      {/* <div className="search">Search</div>
+      <div className="filter-bar">Filter</div> */}
       <div className="team-list">
         {map(
           teamList,
-          ({ type, name, total, current, reverse, link, joined }) => {
+          ({ type, name, image, total, current, reverse, link, joined }) => {
             return (
-              <div className="team-detail" key={name}>
+              <Card
+                className="team-detail"
+                key={name}
+                image={<img src={image} />}
+              >
                 <div className="team-detail-type">
                   {t(`playbook.type.options[${type}]`)}
                 </div>
@@ -35,7 +40,7 @@ const TeamList: React.FC<any> = () => {
                   <button>{t("button.join")}</button>
                 </div>
                 <div className="team-detail-status">可加入</div>
-              </div>
+              </Card>
             );
           }
         )}
