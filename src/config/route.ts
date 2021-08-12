@@ -1,8 +1,8 @@
 import CreateTeam from "../components/create-team/CreateTeam";
 import Home from "../components/home/Home";
-import Playbook from "../components/playbook-list/Playbook";
+import Playbook from "../components/playbooks/Playbooks";
 import Profile from "../components/profile/Profile";
-import TeamList from "../components/team-list/TeamList";
+import TeamList from "../components/teams/Teams";
 import { PageName, PagePath } from "../constants/page";
 
 const pagesConfig = [
@@ -14,10 +14,10 @@ const pagesConfig = [
     fixtureToggle: true,
   },
   {
-    name: PageName.Playbook,
-    path: PagePath.Playbook,
+    name: PageName.Teams,
+    path: PagePath.Teams,
     exact: true,
-    component: Playbook,
+    component: TeamList,
     fixtureToggle: true,
   },
   {
@@ -26,12 +26,12 @@ const pagesConfig = [
     exact: true,
     component: CreateTeam,
     fixtureToggle: true,
-  },,
+  },
   {
-    name: PageName.Team,
-    path: PagePath.Team,
+    name: PageName.Playbooks,
+    path: PagePath.Playbooks,
     exact: true,
-    component: TeamList,
+    component: Playbook,
     fixtureToggle: true,
   },
   {

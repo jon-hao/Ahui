@@ -1,35 +1,24 @@
 export enum Theme {
-  Light = "Light",
-  Dark = "Dark",
+  Light = 0,
+  Dark,
 }
 
 export enum BackgroundColor {
-  Light1 = "#610b00",
-  Light2 = "#871400",
-  Light3 = "#ad2102",
-  Light4 = "#d4380d",
-  Light5 = "#fa541c",
-  Light6 = "#ff7a45",
-  Light7 = "#ff9c6e",
-  Light8 = "#ffbb96",
-  Light9 = "#ffd8bf",
-  Light10 = "#fff2e8",
-  Dark1 = "#002766",
-  Dark2 = "#003a8c",
-  Dark3 = "#0050b3",
-  Dark4 = "#096dd9",
-  Dark5 = "#1890ff",
-  Dark6 = "#40a9ff",
-  Dark7 = "#69c0ff",
-  Dark8 = "#91d5ff",
-  Dark9 = "#bae7ff",
-  Dark10 = "#e6f7ff",
+  Light1 = "#F5F5F7",
+  Light2 = "#F5F5F7",
+  Dark1 = "#1F1D2B",
+  Dark2 = "#252836",
 }
 
 export enum Color {
-  White = "#ffffff",
-  Black = "#000000",
-  Gray = "#f5f5f5",
+  DarkTitle = "#FFFFFF",
+  DarkText = "#808191",
+  DarkTextActive = "#FFFFFF",
+  DarkIconActive = "#6C5ECF",
+  LightTitle = "#212121",
+  LightText = "#808191",
+  LightTextActive = "#FFFFFF",
+  LightIconActive = "#6C5ECF",
 }
 
 export enum Shadow {
@@ -40,15 +29,20 @@ export enum Shadow {
 }
 
 export enum FontSize {
-  Title = "36px",
+  Title = "30px",
   Label = "24px",
-  Normal = "14px",
+  Text = "14px",
+}
+
+export enum FontWeight {
+  Title = 500,
+  Text = 300,
 }
 
 export enum LineHeight {
-  Title = "44px",
-  Label = "32px",
-  Normal = "22px",
+  Title = "30px",
+  Label = "24px",
+  Text = "14px",
 }
 
 export enum BreakPoint {

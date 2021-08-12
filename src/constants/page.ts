@@ -1,15 +1,15 @@
 export enum PageName {
-  Home = "Home",
-  Playbook = "Playbook",
-  CreateTeam = "CreateTeam",
-  Team = "Team",
-  Profile = "Profile",
+  Home = "home",
+  Teams = "teams",
+  CreateTeam = "createTeam",
+  Playbooks = "playbooks",
+  Profile = "profile",
 }
 
 export enum PagePath {
-  Home = "/home",
-  Playbook = "/playbook",
+  Home = "/",
+  Teams = "/teams",
   CreateTeam = "/create-team",
-  Team = "/team",
+  Playbooks = "/playbooks",
   Profile = "/profile",
 }

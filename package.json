@@ -9,16 +9,19 @@
     "publish": "npm publish --access public"
   },
   "dependencies": {
-    "@types/axios": "^0.14.0",
+    "@types/react-svg": "^5.0.0",
     "axios": "^0.21.1",
+    "classnames": "^2.3.1",
     "dayjs": "^1.10.4",
     "loadsh": "^0.0.4",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-router": "^5.2.0",
+    "react-svg": "^14.0.8",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/lodash": "^4.14.168",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",

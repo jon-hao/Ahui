@@ -1,5 +1,5 @@
 import React from "react";
-import { PlaybookWrapper } from "./Playbook.style";
+import { PlaybookWrapper } from "./Playbooks.style";
 
 const Playbook: React.FC<any> = () => {
   return <PlaybookWrapper>Playbook</PlaybookWrapper>;
