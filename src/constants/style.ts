@@ -36,7 +36,7 @@ export enum FontSize {
 
 export enum FontWeight {
   Title = 500,
-  Text = 300,
+  Label = 300,
 }
 
 export enum LineHeight {

@@ -8,6 +8,8 @@ const language = {
   },
   teams: {
     title: "组局",
+    people: "人数：",
+    reverse: "接受反串："
   },
   button: {
     join: "加入",

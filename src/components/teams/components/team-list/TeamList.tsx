@@ -1,9 +1,11 @@
 import { map } from "lodash";
 import React, { useContext } from "react";
+import { ReactSVG } from "react-svg";
 import Card from "../../../common/card/Card";
 import { LanguageContext } from "../../../common/context/LanguageContext";
 import { TTeam } from "../../types/param";
 import { TeamListWrapper } from "./TeamList.style";
+import applyTeam from "../../../../assets/svg/apply-team.svg";
 
 type TTeamListProps = {
   className?: string;
@@ -25,20 +27,19 @@ const TeamList: React.FC<TTeamListProps> = ({ className, teamList }) => {
               image={<img src={image} />}
             >
               <div className="team-detail-type">
-                {t(`playbook.type.options[${type}]`)}
+                {t(`playbook.types.[${type}]`)}
               </div>
               <div className="team-detail-name">
-                <a href={link}>{name}</a>
+                {name}
               </div>
               <div className="team-detail-people">
-                {`${current[0]}/${total[0]}${t(`gender[0]`)}`}
-                {`${current[1]}/${total[1]}${t(`gender[1]`)}`}
+                {t("teams.people")}
+                {`${t(`gender[0]`)} ${current[0]}/${total[0]}`} {`${t(`gender[1]`)} ${current[1]}/${total[1]}`}
               </div>
-              <div className="team-detail-reverse">{reverse}</div>
+              <div className="team-detail-reverse">{t("teams.reverse")}{reverse ? "是" : "否"}</div>
               <div className="team-detail-button">
-                <button>{t("button.join")}</button>
+                <ReactSVG src={applyTeam} />
               </div>
-              <div className="team-detail-status">可加入</div>
             </Card>
           );
         }

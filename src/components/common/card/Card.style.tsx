@@ -25,6 +25,9 @@ export const CardWrapper = styled.div`
   .card-content {
     padding: 12px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     ${Media.Mobile} {
       flex: auto;
     }

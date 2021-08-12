@@ -12,7 +12,6 @@ import { LanguageContext } from "../context/LanguageContext";
 import Icon from "../icon/Icon";
 import { createBrowserHistory } from "history";
 import classnames from "classnames";
-import { useHistory, useLocation } from "react-router";
 
 export const history = createBrowserHistory();
 
