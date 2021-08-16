@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { BackgroundColor, Color, FontSize, FontWeight } from "../../../../constants/style";
+import {
+  BackgroundColor,
+  FontSize,
+  FontWeight,
+  Color,
+  Theme,
+} from "../../../../../constants/style";
 
 export const TeamListWrapper = styled.div`
   box-sizing: border-box;
@@ -7,7 +13,9 @@ export const TeamListWrapper = styled.div`
     margin-bottom: 24px;
     border-radius: 8px;
     background: ${(props) =>
-      props.theme ? BackgroundColor.Dark2 : BackgroundColor.Light2};
+      props.theme === Theme.Dark
+        ? BackgroundColor.Dark2
+        : BackgroundColor.Light2};
     position: relative;
     .team-detail-type {
       position: absolute;
@@ -22,7 +30,7 @@ export const TeamListWrapper = styled.div`
     .team-detail-reverse {
       font-size: ${FontSize.Text};
       color: ${(props) =>
-        props.theme ? Color.DarkText : Color.LightText};
+        props.theme === Theme.Dark ? Color.DarkText : Color.LightText};
     }
     .team-detail-button {
       position: absolute;
@@ -37,7 +45,8 @@ export const TeamListWrapper = styled.div`
       svg {
         height: 20px;
         width: 20px;
-        fill: ${(props) => (props.theme ? Color.DarkText : Color.LightText)};
+        fill: ${(props) =>
+          props.theme === Theme.Dark ? Color.DarkText : Color.LightText};
       }
     }
   }

@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { PageName, PagePath } from "../../../constants/page";
-import { Theme } from "../../../constants/style";
 import { FooterWrapper } from "./Footer.style";
 import pigeon from "../../../assets/svg/pigeon.svg";
 import teams from "../../../assets/svg/teams.svg";
@@ -8,12 +7,10 @@ import add from "../../../assets/svg/add.svg";
 import playbooks from "../../../assets/svg/playbooks.svg";
 import profile from "../../../assets/svg/profile.svg";
 import { map } from "lodash";
-import { LanguageContext } from "../context/LanguageContext";
+import { LanguageContext } from "../../context/LanguageContext";
 import Icon from "../icon/Icon";
-import { createBrowserHistory } from "history";
 import classnames from "classnames";
-
-export const history = createBrowserHistory();
+import { ThemeContext } from "../../context/ThemeContext";
 
 const pages = [
   {
@@ -25,11 +22,6 @@ const pages = [
     name: PageName.Teams,
     path: PagePath.Teams,
     icon: teams,
-  },
-  {
-    name: PageName.CreateTeam,
-    path: PagePath.CreateTeam,
-    icon: add,
   },
   {
     name: PageName.Playbooks,
@@ -45,11 +37,12 @@ const pages = [
 
 type TFooterProps = {
   className?: string;
-  theme?: Theme;
+  history?: any;
 };
 
-const Footer: React.FC<TFooterProps> = ({ className, theme }) => {
+const Footer: React.FC<TFooterProps> = ({ className, history }) => {
   const { t } = useContext(LanguageContext);
+  const { theme } = useContext(ThemeContext);
   const [pathname, setPathname] = useState(history.location.pathname);
 
   return (

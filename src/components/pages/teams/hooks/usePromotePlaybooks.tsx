@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchLocal } from "../../../helper/httpRequest";
+import { fetchLocal } from "../../../../helper/httpRequest";
 
 const fake = [
   {

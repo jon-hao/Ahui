@@ -1,8 +1,8 @@
-import CreateTeam from "../components/create-team/CreateTeam";
-import Home from "../components/home/Home";
-import Playbook from "../components/playbooks/Playbooks";
-import Profile from "../components/profile/Profile";
-import Teams from "../components/teams/Teams";
+import CreateTeam from "../components/pages/create-team/CreateTeam";
+import Home from "../components/pages/home/Home";
+import Playbook from "../components/pages/playbooks/Playbooks";
+import Profile from "../components/pages/profile/Profile";
+import Teams from "../components/pages/teams/Teams";
 import { PageName, PagePath } from "../constants/page";
 
 const pagesConfig = [

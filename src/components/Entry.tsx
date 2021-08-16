@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
-import { Redirect, Route, Router, Switch } from "react-router";
+import { Route, Router, Switch } from "react-router";
 import { EntryWrapper } from "./Entry.style";
-import { PagePath } from "../constants/page";
 import { filter, map } from "lodash";
 import pagesConfig from "../config/route";
-import { LanguageProvider } from "./common/context/LanguageContext";
-import { ThemeContext, ThemeProvider } from "./common/context/ThemeContext";
+import { LanguageProvider } from "./context/LanguageContext";
+import { ThemeContext, ThemeProvider } from "./context/ThemeContext";
 import Footer from "./common/footer/Footer";
-import { history } from "../components/common/footer/Footer";
+import Header from "./common/header/Header";
+import { createBrowserHistory } from "history";
+
+export const history = createBrowserHistory();
 
 const Entry: React.FC<any> = () => {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <LanguageProvider>
       <ThemeProvider>
-        <EntryWrapper theme={theme}>
+        <EntryWrapper>
           <Router history={history}>
             <Switch>
               {map(
@@ -32,7 +32,7 @@ const Entry: React.FC<any> = () => {
             </Switch>
           </Router>
         </EntryWrapper>
-        <Footer theme={theme} />
+        <Footer history={history} />
       </ThemeProvider>
     </LanguageProvider>
   );

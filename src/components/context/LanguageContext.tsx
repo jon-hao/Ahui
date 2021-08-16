@@ -1,7 +1,7 @@
 import { get, reduce } from "lodash";
 import React, { useState } from "react";
-import { Language } from "../../../constants/language";
-import zhCN from "../../../lang/zh-CN";
+import { Language } from "../../constants/language";
+import zhCN from "../../lang/zh-CN";
 
 const languages = {
   [Language.ZHCN]: zhCN,

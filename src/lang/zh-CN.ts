@@ -7,16 +7,28 @@ const language = {
     profile: "我的",
   },
   teams: {
-    title: "组局",
-    people: "人数：",
-    reverse: "接受反串："
+    matching: "快速匹配",
+    people: "人数: ",
+    reverse: "接受反串: ",
+    peopleCount: "人数",
+    filter: {
+      type: "剧本类型",
+      difficulty: "剧本难度",
+      worldView: "世界观",
+      modus: "限定范围",
+      people: "人数限制",
+    },
   },
   button: {
     join: "加入",
   },
   gender: ["男", "女"],
   playbook: {
-    types: ["硬核", "欢乐", "情感", "恐怖", "其他"],
+    types: ["硬核", "欢乐", "情感", "恐怖"],
+    difficulty: ["新手", "进阶", "烧脑", "地狱"],
+    carrier: ["桌面", "实景"],
+    modus: ["盒装", "城限", "独家"],
+    worldView: ["本格", "变格", "新本格"],
   },
 };
 

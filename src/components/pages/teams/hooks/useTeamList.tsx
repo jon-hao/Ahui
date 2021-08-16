@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { PlaybookType } from "../../../constants/playbook";
-import { fetchLocal } from "../../../helper/httpRequest";
+import { PlaybookType } from "../../../../constants/playbook";
+import { fetchLocal } from "../../../../helper/httpRequest";
 import { TFilter } from "../types/param";
 
 const fake = [

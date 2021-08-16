@@ -1,4 +1,4 @@
-import { PlaybookType } from "../../../constants/playbook";
+import { PlaybookType } from "../../../../constants/playbook";
 
 export type TFilter = {
   type?: PlaybookType;
