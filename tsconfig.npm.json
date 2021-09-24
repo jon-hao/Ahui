@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "declaration": true,
+    "jsx": "preserve",
+    "outDir": "lib",
+    "removeComments": true,
+    "composite": false,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "incremental": false
+  },
+  "include": [
+    "./src/components/common",
+    "./src/components/context",
+    "./src/constants",
+    "./src/index.ts"
+  ]
+}

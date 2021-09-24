@@ -1,38 +1,17 @@
-import React, { useContext } from "react";
-import { Route, Router, Switch } from "react-router";
+import React from "react";
 import { EntryWrapper } from "./Entry.style";
-import { filter, map } from "lodash";
-import pagesConfig from "../config/route";
 import { LanguageProvider } from "./context/LanguageContext";
-import { ThemeContext, ThemeProvider } from "./context/ThemeContext";
-import Footer from "./common/footer/Footer";
-import Header from "./common/header/Header";
-import { createBrowserHistory } from "history";
-
-export const history = createBrowserHistory();
+import { ThemeProvider } from "./context/ThemeContext";
+import language from "../lang/zh-CN";
+import { Language } from "../constants/language";
 
 const Entry: React.FC<any> = () => {
   return (
-    <LanguageProvider>
+    <LanguageProvider languages={{[Language.ZHCN] : language}}>
       <ThemeProvider>
         <EntryWrapper>
-          <Router history={history}>
-            <Switch>
-              {map(
-                filter(pagesConfig, "fixtureToggle"),
-                ({ name, path, component, exact }: any) => (
-                  <Route
-                    key={name}
-                    path={path}
-                    component={component}
-                    exact={exact}
-                  />
-                )
-              )}
-            </Switch>
-          </Router>
+          PuJunhao
         </EntryWrapper>
-        <Footer history={history} />
       </ThemeProvider>
     </LanguageProvider>
   );

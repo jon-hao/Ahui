@@ -1,17 +1,19 @@
 import { get, reduce } from "lodash";
 import React, { useState } from "react";
 import { Language } from "../../constants/language";
-import zhCN from "../../lang/zh-CN";
 
-const languages = {
-  [Language.ZHCN]: zhCN,
+type TLanguages = {
+  [key in Language]?: unknown;
 };
 
 export const LanguageContext = React.createContext({
   language: Language.ZHCN,
 } as any);
 
-export const LanguageProvider: React.FC = ({ children }) => {
+export const LanguageProvider: React.FC<{ languages: TLanguages }> = ({
+  children,
+  languages = {} as TLanguages,
+}) => {
   const [language, setLanguage] = useState(Language.ZHCN);
 
   const t = (path: string, param: any) => {
