@@ -1,5 +1,6 @@
-import React, { MouseEventHandler } from "react";
-import { ButtonWrapper } from "./Button,style";
+import React, { MouseEventHandler, useContext } from "react";
+import { ThemeContext } from "../../..";
+import { ButtonWrapper } from "./Button.style";
 
 type TButtonProps = {
   className?: string;
@@ -7,8 +8,10 @@ type TButtonProps = {
 };
 
 const Button: React.FC<TButtonProps> = ({ className, onClick, children }) => {
+  const { colorMap } = useContext(ThemeContext);
+
   return (
-    <ButtonWrapper className={className} onClick={onClick}>
+    <ButtonWrapper {...colorMap} className={className} onClick={onClick}>
       {children}
     </ButtonWrapper>
   );

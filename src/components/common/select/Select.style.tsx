@@ -1,12 +1,8 @@
 import styled from "styled-components";
-import {
-  BackgroundColor,
-  Color,
-  FontSize,
-  Shadow,
-} from "../../../constants/style";
+import { TColor } from "../../../constants/color";
+import { FontSize } from "../../../constants/style";
 
-export const SelectWrapper = styled.div`
+export const SelectWrapper = styled.div<TColor>`
   position: relative;
   height: 100%;
   width: 100%;
@@ -23,11 +19,11 @@ export const SelectWrapper = styled.div`
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: ${BackgroundColor.Light2};
-    box-shadow: ${Shadow.Down2};
+    background: ${p => p.background.primary};
+    box-shadow: ${p => p.shadow.primary};
     & > div {
       padding: 12px 18px;
-      border-bottom: solid 1px ${Color.LightBorder};
+      border-bottom: ${p => p.border};
       width: 72px;
       box-sizing: border-box;
     }

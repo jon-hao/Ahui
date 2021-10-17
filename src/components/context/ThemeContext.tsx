@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import { Theme } from "../../constants/style";
+import { ColorMap, Theme } from "../../constants/color";
 
 export const ThemeContext = React.createContext({
-  theme: Theme.Light,
+  colorMap: ColorMap[Theme.Light],
 } as any);
 
 export const ThemeProvider: React.FC = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState(Theme.Light);
+  const [colorMap, setColorMap] = useState(ColorMap[Theme.Light]);
 
   return (
     <ThemeContext.Provider
       value={{
-        theme: currentTheme,
-        setTheme: (theme: Theme) => setCurrentTheme(theme),
+        colorMap,
+        setColorMap: (theme: Theme) => setColorMap(ColorMap[theme]),
       }}
     >
       {children}

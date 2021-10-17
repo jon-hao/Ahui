@@ -1,6 +1,7 @@
-import React, { ReactEventHandler, useState } from "react";
+import React, { ReactEventHandler, useContext, useState } from "react";
 import { SelectWrapper } from "./Select.style";
 import { map } from "lodash";
+import { ThemeContext } from "styled-components";
 
 type TOptions = {
   name: string;
@@ -12,7 +13,7 @@ type TSelectProps = {
   classNameOption?: string;
   text: string;
   options: TOptions[];
-  onSelect?: ReactEventHandler;
+  onSelect: ReactEventHandler;
 };
 
 const Select: React.FC<TSelectProps> = ({
@@ -23,12 +24,14 @@ const Select: React.FC<TSelectProps> = ({
   onSelect,
 }) => {
   const [open, setOpen] = useState(false);
+  const { colorMap } = useContext(ThemeContext);
 
   return (
     <SelectWrapper
       className={className}
       tabIndex={-1}
       onBlur={() => setOpen(false)}
+      {...colorMap}
     >
       <div className="select-name" onClick={() => setOpen(!open)}>
         {text}

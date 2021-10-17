@@ -1,20 +1,21 @@
 import styled from "styled-components";
-import { Media, Shadow } from "../../../constants/style";
+import { BreakPoint } from "../../..";
+import { TColor } from "../../../constants/color";
 
-export const CardWrapper = styled.div`
-  box-shadow: ${Shadow.Down1};
+export const CardWrapper = styled.div<TColor>`
+  box-shadow: ${p => p.shadow.primary};
   box-sizing: border-box;
   height: 120px;
   width: 100%;
-  ${Media.Mobile} {
+  ${BreakPoint.Mobile} {
     display: flex;
   }
   .card-image {
-    ${Media.Desktop} {
+    ${BreakPoint.Desktop} {
       width: 100%;
       height: auto;
     }
-    ${Media.Mobile} {
+    ${BreakPoint.Mobile} {
       flex: 0 0 120px;
     }
     img {
@@ -28,7 +29,7 @@ export const CardWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    ${Media.Mobile} {
+    ${BreakPoint.Mobile} {
       flex: auto;
     }
   }
