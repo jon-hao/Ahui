@@ -63,7 +63,7 @@ export const ColorMap: TColorMap = {
     background: {
       primary: Background.LightPrimary,
       secondary: Background.LightSecondary,
-      button: Background.LightButton
+      button: Background.LightButton,
     },
     color: {
       title: Color.LightTitle,
@@ -81,7 +81,7 @@ export const ColorMap: TColorMap = {
     background: {
       primary: Background.DarkPrimary,
       secondary: Background.DarkSecondary,
-      button: Background.DarkButton
+      button: Background.DarkButton,
     },
     color: {
       title: Color.DarkTitle,

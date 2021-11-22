@@ -4,8 +4,8 @@ import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import zhCN from "../lang/zh-CN";
 import { Language } from "../constants/language";
-import "../style/variable.scss"
-import "./Entry.scss"
+import "../style/variable.scss";
+import "./Entry.scss";
 
 const languages = {
   [Language.ZHCN]: zhCN,
