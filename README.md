@@ -20,14 +20,32 @@ yarn add @albatrosses/ahui
 ## Usage
 
 ```js
-import { Button } from "@albatrosses/ahui"
-import { LanguageProvider } from "@albatrosses/ahui"
-import { BackgroundColor } from "@albatrosses/ahui"
+import { Button, LanguageProvider, BackgroundColor, Theme } from "@albatrosses/ahui"
 import "@albatrosses/ahui/style/index.css"
 
-const Case = () => {
-  <LanguageProvider>
-    <Button style={"background-color" : BackgroundColor.Light1} />
-  </LanguageProvider>
+const languages = {
+  [Language.ZHCN]: zhCN
+};
+
+const Entry: React.FC<any> = () => {
+  return (
+    <LanguageProvider languages={languages}>
+      <ThemeProvider>
+        <EntryWrapper className={Theme.Light}>
+          <div>Do Something</div>
+        </EntryWrapper>
+      </ThemeProvider>
+    </LanguageProvider>
+  );
+};
+```
+
+As well, you can use theme in your scss
+
+```scss
+body {
+  @include theme($themes) {
+    box-shadow: themed('ShadowPrimary');
+  }
 }
 ```

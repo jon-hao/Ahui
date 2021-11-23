@@ -13,6 +13,8 @@
     "incremental": false
   },
   "include": [
+    "./src/assets/fonts",
+    "./src/assets/style",
     "./src/components/common",
     "./src/components/context",
     "./src/constants",

@@ -1,0 +1,52 @@
+$ShadowPrimaryLight: 0px 1px 2px -2px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09);
+$ShadowSecondaryLight: 0px 3px	6px	-4px rgba(0, 0, 0, 0.12), 0px 6px	16px	0px rgba(0, 0, 0, 0.08), 0px 9px	28px	8px rgba(0, 0, 0, 0.05);
+$ShadowThirdLight: 0px 6px	16px -8px rgba(0, 0, 0, 0.08), 0px 9px	28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03);
+
+$ShadowPrimaryDark: 0px 1px 2px -2px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09);
+$ShadowSecondaryDark: 0px 3px	6px	-4px rgba(0, 0, 0, 0.12), 0px 6px	16px	0px rgba(0, 0, 0, 0.08), 0px 9px	28px	8px rgba(0, 0, 0, 0.05);
+$ShadowThirdDark: 0px 6px	16px -8px rgba(0, 0, 0, 0.08), 0px 9px	28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03);
+
+$themes: (
+  light: (
+    BackgroundPrimary: #FFFFFF,
+    BackgroundSecondary: #F5F5F7,
+    BackgroundButton: #F5F5F7,
+    ColorTitle: #212121,
+    ColorText: #666666,
+    ColorDescription: #9E9E9E,
+    ShadowPrimary: $ShadowPrimaryLight,
+    ShadowSecondary: $ShadowSecondaryLight,
+    ShadowThird: $ShadowThirdLight,
+    Border: 1px solid #F0F0F0,
+  ),
+  dark: (
+    BackgroundPrimary: #FFFFFF,
+    BackgroundSecondary: #F5F5F7,
+    BackgroundButton: #F5F5F7,
+    ColorTitle: #212121,
+    ColorText: #666666,
+    ColorDescription: #9E9E9E,
+    ShadowPrimary: $ShadowPrimaryDark,
+    ShadowSecondary: $ShadowSecondaryDark,
+    ShadowThird: $ShadowThirdDark,
+    Border: 1px solid #F0F0F0,
+  ),
+);
+
+@mixin theme($themes: $themes) {
+  @each $theme-name, $map in $themes {
+    .#{$theme-name} & {
+      $theme-map: () !global;
+      @each $key, $value in $map {
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+      @content;
+
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}

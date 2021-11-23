@@ -9,3 +9,4 @@ export * from "./components/context/ThemeContext";
 
 export * from "./constants/style";
 export * from "./constants/language";
+export * from "./constants/color";
