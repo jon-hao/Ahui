@@ -20,7 +20,7 @@ yarn add @albatrosses/ahui
 ## Usage
 
 ```js
-import { Button, LanguageProvider, BackgroundColor, Theme } from "@albatrosses/ahui"
+import { LanguageProvider, Theme } from "@albatrosses/ahui"
 import "@albatrosses/ahui/style/index.css"
 
 const languages = {
@@ -30,11 +30,9 @@ const languages = {
 const Entry: React.FC<any> = () => {
   return (
     <LanguageProvider languages={languages}>
-      <ThemeProvider>
-        <EntryWrapper className={Theme.Light}>
-          <div>Do Something</div>
-        </EntryWrapper>
-      </ThemeProvider>
+      <EntryWrapper className={Theme.Light}>
+        <div>Do Something</div>
+      </EntryWrapper>
     </LanguageProvider>
   );
 };
@@ -44,8 +42,8 @@ As well, you can use theme in your scss
 
 ```scss
 body {
-  @include theme($themes) {
-    box-shadow: themed('ShadowPrimary');
+  @include theme($theme-content) {
+    box-shadow: themed('shadow-primary');
   }
 }
 ```

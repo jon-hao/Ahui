@@ -1,23 +1,36 @@
+// @ts-nocheck
+import style from "../assets/style/variable.module.scss";
+
+export enum Theme {
+  Light = style.themeLight,
+  Dark = style.themeDark,
+}
+
 export enum FontSize {
-  Title = "30px",
-  Text = "14px",
-  Description = "14px",
+  Title = style.fontSizeTitle,
+  Text = style.fontSizeText,
+  Description = style.fontSizeDescription,
 }
 
 export enum FontWeight {
-  Title = 500,
-  Text = 300,
-  Description = 100,
+  Title = style.fontWeightTitle,
+  Text = style.fontWeightText,
+  Description = style.fontWeightDescription,
 }
 
 export enum LineHeight {
-  Title = "30px",
-  Label = "24px",
-  Text = "14px",
+  Title = style.lineHeightTitle,
+  Text = style.lineHeightText,
+  Description = style.lineHeightDescription,
+}
+
+export enum Media {
+  Desktop = style.mediaDesktop,
+  Tablet = style.mediaTablet,
+  Mobile = style.mediaMobile,
 }
 
 export enum BreakPoint {
-  Desktop = "@media (min-width: 1025px)",
-  Tablet = "@media (max-width: 1024px) and (min-width: 768px)",
-  Mobile = "@media (max-width: 767px)",
+  Tablet = style.breakTablet,
+  Mobile = style.breakMobile,
 }

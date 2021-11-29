@@ -1,24 +1,16 @@
 import React from "react";
-import { EntryWrapper } from "./Entry.style";
+import { Theme } from "../constants/style";
 import { LanguageProvider } from "./context/LanguageContext";
-import { ThemeProvider } from "./context/ThemeContext";
-import zhCN from "../lang/zh-CN";
-import { Language } from "../constants/language";
-import "./Entry.scss"
-import { Theme } from "..";
+import "./Entry.scss";
 
-const languages = {
-  [Language.ZHCN]: zhCN,
-};
+const languages = {};
 
 const Entry: React.FC<any> = () => {
   return (
     <LanguageProvider languages={languages}>
-      <ThemeProvider>
-        <EntryWrapper className={Theme.Light}>
-          <div className="example">Example</div>
-        </EntryWrapper>
-      </ThemeProvider>
+      <div className={Theme.Light as any}>
+        <div className="example">Example</div>
+      </div>
     </LanguageProvider>
   );
 };

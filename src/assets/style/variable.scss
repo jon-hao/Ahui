@@ -1,40 +1,64 @@
-$ShadowPrimaryLight: 0px 1px 2px -2px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09);
-$ShadowSecondaryLight: 0px 3px	6px	-4px rgba(0, 0, 0, 0.12), 0px 6px	16px	0px rgba(0, 0, 0, 0.08), 0px 9px	28px	8px rgba(0, 0, 0, 0.05);
-$ShadowThirdLight: 0px 6px	16px -8px rgba(0, 0, 0, 0.08), 0px 9px	28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03);
+$font-size: (
+  title: 24px,
+  text: 16px,
+  description: 12px
+);
 
-$ShadowPrimaryDark: 0px 1px 2px -2px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09);
-$ShadowSecondaryDark: 0px 3px	6px	-4px rgba(0, 0, 0, 0.12), 0px 6px	16px	0px rgba(0, 0, 0, 0.08), 0px 9px	28px	8px rgba(0, 0, 0, 0.05);
-$ShadowThirdDark: 0px 6px	16px -8px rgba(0, 0, 0, 0.08), 0px 9px	28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03);
+$font-weight: (
+  title: 500,
+  text: 300,
+  description: 100
+);
 
-$themes: (
-  light: (
-    BackgroundPrimary: #FFFFFF,
-    BackgroundSecondary: #F5F5F7,
-    BackgroundButton: #F5F5F7,
-    ColorTitle: #212121,
-    ColorText: #666666,
-    ColorDescription: #9E9E9E,
-    ShadowPrimary: $ShadowPrimaryLight,
-    ShadowSecondary: $ShadowSecondaryLight,
-    ShadowThird: $ShadowThirdLight,
-    Border: 1px solid #F0F0F0,
+$line-height: (
+  title: 24px,
+  text: 16px,
+  description: 12px
+);
+
+$break-point-tablet: 1024;
+$break-point-mobile: 768;
+
+$media-desktop: "(min-width: #{$break-point-tablet + 1}px)";
+$media-tablet: "(max-width: #{$break-point-tablet}px) and (min-width: #{$break-point-mobile}px)";
+$media-mobile: "(max-width: #{$break-point-mobile - 1}px)";
+
+$shadow-primary-light: 0px 1px 2px -2px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09);
+$shadow-secondary-light: 0px 3px	6px	-4px rgba(0, 0, 0, 0.12), 0px 6px	16px	0px rgba(0, 0, 0, 0.08), 0px 9px	28px	8px rgba(0, 0, 0, 0.05);
+$shadow-third-light: 0px 6px	16px -8px rgba(0, 0, 0, 0.08), 0px 9px	28px 0px rgba(0, 0, 0, 0.05), 0px 12px 48px 16px rgba(0, 0, 0, 0.03);
+
+$theme: (
+  light: light,
+  dark: dark
+);
+
+$theme-content: (
+  #{map-get($theme, "light")}: (
+    background-primary: #FFFFFF,
+    background-secondary: #F5F5F7,
+    color-primary: #212121,
+    color-secondary: #666666,
+    color-third: #9E9E9E,
+    shadow-primary: $shadow-primary-light,
+    shadow-secondary: $shadow-secondary-light,
+    shadow-third: $shadow-third-light,
+    border: 1px solid #F0F0F0,
   ),
-  dark: (
-    BackgroundPrimary: #FFFFFF,
-    BackgroundSecondary: #F5F5F7,
-    BackgroundButton: #F5F5F7,
-    ColorTitle: #212121,
-    ColorText: #666666,
-    ColorDescription: #9E9E9E,
-    ShadowPrimary: $ShadowPrimaryDark,
-    ShadowSecondary: $ShadowSecondaryDark,
-    ShadowThird: $ShadowThirdDark,
-    Border: 1px solid #F0F0F0,
+  #{map-get($theme, "dark")}: (
+    background-primary: #FFFFFF,
+    background-secondary: #F5F5F7,
+    color-primary: #212121,
+    color-secondary: #666666,
+    color-third: #9E9E9E,
+    shadow-primary: $shadow-primary-light,
+    shadow-secondary: $shadow-secondary-light,
+    shadow-third: $shadow-third-light,
+    border: 1px solid #F0F0F0,
   ),
 );
 
-@mixin theme($themes: $themes) {
-  @each $theme-name, $map in $themes {
+@mixin theme($theme-content: $theme-content) {
+  @each $theme-name, $map in $theme-content {
     .#{$theme-name} & {
       $theme-map: () !global;
       @each $key, $value in $map {
