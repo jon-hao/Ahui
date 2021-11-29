@@ -1,10 +1,14 @@
 import { get, reduce } from "lodash";
 import React, { useState } from "react";
-import { Language } from "../../constants/language";
 
 type TLanguages = {
   [key in Language]?: unknown;
 };
+
+export enum Language {
+  ZHCN = "zh-CN",
+  ENGB = "en-GB",
+}
 
 export const LanguageContext = React.createContext({
   language: Language.ZHCN,
