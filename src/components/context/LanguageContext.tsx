@@ -1,5 +1,6 @@
 import { get, reduce } from "lodash";
-import React, { useState } from "react";
+import * as React from "react";
+import { useState } from "react";
 
 type TLanguages = {
   [key in Language]?: unknown;
