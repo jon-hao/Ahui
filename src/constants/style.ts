@@ -6,6 +6,16 @@ export enum Theme {
   Dark = style.themeDark,
 }
 
+export enum Color {
+  BackgroundPrimary = style.backgroundPrimary,
+  ColorPrimary = style.colorPrimary,
+  ColorSuccess = style.colorSuccess,
+  ColorActive = style.colorActive,
+  ColorSecondary = style.colorSecondary,
+  ColorImportant = style.colorImportant,
+  ColorDisable = style.colorDisable,
+}
+
 export enum Media {
   Desktop = style.mediaDesktop,
   Tablet = style.mediaTablet,

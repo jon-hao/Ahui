@@ -1,6 +1,13 @@
 @import "./variable.scss";
 
 :export {
+  backgroundPrimary: $background-primary;
+  colorPrimary: $color-primary;
+  colorSuccess: $color-success;
+  colorActive: $color-active;
+  colorSecondary: $color-secondary;
+  colorImportant: $color-important;
+  colorDisable: $color-disable;
   breakTablet: $break-point-tablet;
   breakMobile: $break-point-mobile;
   mediaDesktop: "@media #{$media-desktop}";
