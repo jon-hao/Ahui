@@ -16,6 +16,7 @@
     "./src/assets/fonts",
     "./src/assets/style",
     "./src/components/common",
+    "./src/components/mobile",
     "./src/components/context",
     "./src/constants",
     "./src/index.ts"

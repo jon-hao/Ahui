@@ -1,6 +1,6 @@
 # Ahui
 
-> 自用UI组件、色彩、字体以及样式库
+> UI components, colors, fonts and style for Albatrosses
 
 - Components
 - Color
@@ -18,32 +18,52 @@ yarn add @albatrosses/ahui
 ```
 
 ## Usage
+Import `@albatrosses/ahui` and `@albatrosses/ahui/style/index.css` in your root component
 
 ```js
-import { LanguageProvider, Theme } from "@albatrosses/ahui"
+import { LanguageProvider, Theme, Language } from "@albatrosses/ahui"
 import "@albatrosses/ahui/style/index.css"
 
 const languages = {
-  [Language.ZHCN]: zhCN
+  [Language.ZHCN]: {
+    test: "测试"
+  }
 };
 
 const Entry: React.FC<any> = () => {
   return (
     <LanguageProvider languages={languages}>
-      <EntryWrapper className={Theme.Light}>
-        <div>Do Something</div>
-      </EntryWrapper>
+      <div className={Theme.Light as any}>
+        <div className="example">Example</div>
+      </div>
     </LanguageProvider>
   );
 };
 ```
 
-As well, you can use theme in your scss
+Then you can use theme in your scss
 
 ```scss
-body {
+@import "./src/assets/style/index.scss";
+
+.example {
   @include theme($theme-content) {
-    box-shadow: themed('shadow-primary');
+    box-shadow: themed("shadow-primary");
+    background-color: themed("color-success");
   }
 }
+```
+
+As well, you can import `index.scss` within global config
+
+```typescript
+css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "./src/assets/style/index.scss";
+        `
+      }
+    }
+  },
 ```

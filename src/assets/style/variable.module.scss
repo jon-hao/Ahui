@@ -1,15 +1,6 @@
 @import "./variable.scss";
 
 :export {
-  fontSizeTitle: map-get($font-size, "title");
-  fontSizeText: map-get($font-size, "text");
-  fontSizeDescription: map-get($font-size, "description");
-  fontWeightTitle: map-get($font-weight, "title");
-  fontWeightText: map-get($font-weight, "text");
-  fontWeightDescription: map-get($font-weight, "description");
-  lineHeightTitle: map-get($line-height, "title");
-  lineHeightText: map-get($line-height, "text");
-  lineHeightDescription: map-get($line-height, "description");
   breakTablet: $break-point-tablet;
   breakMobile: $break-point-mobile;
   mediaDesktop: "@media #{$media-desktop}";
