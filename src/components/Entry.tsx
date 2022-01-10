@@ -1,16 +1,14 @@
 import React from "react";
-import { Theme } from "../constants/style";
 import { LanguageProvider } from "./context/LanguageContext";
 import "./Entry.scss";
+import Am from "./mobile";
 
 const languages = {};
 
 const Entry: React.FC<any> = () => {
   return (
     <LanguageProvider languages={languages}>
-      <div className={Theme.Light as any}>
-        <div className="example">Example</div>
-      </div>
+      <Am.Container title="Ahui">UI components, colors, fonts and style for Albatrosses</Am.Container>
     </LanguageProvider>
   );
 };

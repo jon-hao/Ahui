@@ -1,24 +1,27 @@
+import { Theme } from "../../../constants/style";
 import React from "react";
-import "./Container.scss";
+import ContainerWrapper from "./Container.style";
 
 type TContainerProps = {
   className?: string;
   title?: any;
   absolute?: any;
+  theme?: Theme;
 };
 
 const Container: React.FC<TContainerProps> = ({
   className = "",
   title,
   absolute,
+  theme = Theme.Light,
   children,
 }) => {
   return (
-    <div className={`container ${className}`}>
+    <ContainerWrapper className={`container ${theme} ${className}`}>
       <div className="container-header">{title}</div>
       <div className="container-bodyer">{children}</div>
       <div className="container-absolute">{absolute}</div>
-    </div>
+    </ContainerWrapper>
   );
 };
 

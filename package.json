@@ -1,12 +1,11 @@
 {
   "name": "@albatrosses/ahui",
-  "version": "0.0.9",
+  "version": "0.0.11",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "build:npm": "tsc --build tsconfig.npm.json && cp -r ./src/assets ./lib",
-    "lint": "tslint -p . -c ./tslint.json --fix",
-    "publish": "publish --access public"
+    "lint": "tslint -p . -c ./tslint.json --fix"
   },
   "dependencies": {
     "dayjs": "^1.10.4",

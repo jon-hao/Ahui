@@ -1,5 +1,7 @@
 import Container from "./container/Container";
 
-export const components = {
+const components = {
   Container,
 };
+
+export default components;
