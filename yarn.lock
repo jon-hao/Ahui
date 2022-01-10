@@ -2,6 +2,19 @@
 # yarn lockfile v1
 
 
+"@albatrosses/ahui@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@albatrosses/ahui/-/ahui-0.0.12.tgz#b02a8b7e702b9478eae7fc2a1b9f96e61a94e5f5"
+  integrity sha512-X0sO8GAYW+Cj15OPvqi/e6LVj46AIeRaXEBJXoAaqB7BnI0YlLjktG8FGBroljNWPa5sZe9IFSZSMoM6vb2OGw==
+  dependencies:
+    dayjs "^1.10.4"
+    loadsh "^0.0.4"
+    react "^17.0.0"
+    react-dom "^17.0.0"
+    react-svg "^14.0.8"
+    sass "^1.42.1"
+    styled-components "^5.2.1"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13":
   version "7.12.13"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.13.tgz#dcfc826beef65e75c50e21d3837d7d95798dd658"
