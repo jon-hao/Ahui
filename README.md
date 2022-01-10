@@ -21,14 +21,12 @@ yarn add @albatrosses/ahui
 Import `@albatrosses/ahui` and `@albatrosses/ahui/style/index.css` in your root component
 
 ```js
-import { LanguageProvider, Theme, Language } from "@albatrosses/ahui"
-import "@albatrosses/ahui/style/index.css"
+import React from "react";
+import { LanguageProvider } from "./context/LanguageContext";
+import "./Entry.scss";
+import Am from "./mobile";
 
-const languages = {
-  [Language.ZHCN]: {
-    test: "测试"
-  }
-};
+const languages = {};
 
 const Entry: React.FC<any> = () => {
   return (
