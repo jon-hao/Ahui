@@ -1,5 +1,5 @@
 import { Theme } from "../../../constants/style";
-import React from "react";
+import * as React from "react";
 import ContainerWrapper from "./Container.style";
 
 type TContainerProps = {
