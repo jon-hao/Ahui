@@ -20,28 +20,36 @@ $theme: (
   dark: dark
 );
 
+$background-primary: #F5F5F7;
+$color-primary: #212121;
+$color-success: #07C160;
+$color-active: #2C9AFC;
+$color-secondary: #FF9F0A;
+$color-important: #F26A6D;
+$color-disable: #8c8c8c;
+
 $theme-content: (
   #{map-get($theme, "light")}: (
-    background-primary: #F5F5F7,
-    color-primary: #212121,
-    color-success: #07C160,
-    color-active: #2C9AFC,
-    color-secondary: #FF9F0A,
-    color-important: #F26A6D,
-    color-disable: #8c8c8c,
+    background-primary: $background-primary,
+    color-primary: $color-primary,
+    color-success: $color-success,
+    color-active: $color-active,
+    color-secondary: $color-secondary,
+    color-important: $color-important,
+    color-disable: $color-disable,
     shadow-primary: $shadow-primary-light,
     shadow-secondary: $shadow-secondary-light,
     shadow-third: $shadow-third-light,
     border: 1px solid #F0F0F0,
   ),
   #{map-get($theme, "dark")}: (
-    background-primary: #F5F5F7,
-    color-primary: #212121,
-    color-success: #07C160,
-    color-active: #2C9AFC,
-    color-secondary: #FF9F0A,
-    color-important: #F26A6D,
-    color-disable: #8c8c8c,
+    background-primary: $background-primary,
+    color-primary: $color-primary,
+    color-success: $color-success,
+    color-active: $color-active,
+    color-secondary: $color-secondary,
+    color-important: $color-important,
+    color-disable: $color-disable,
     shadow-primary: $shadow-primary-light,
     shadow-secondary: $shadow-secondary-light,
     shadow-third: $shadow-third-light,

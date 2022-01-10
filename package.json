@@ -1,6 +1,6 @@
 {
   "name": "@albatrosses/ahui",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -8,6 +8,7 @@
     "lint": "tslint -p . -c ./tslint.json --fix"
   },
   "dependencies": {
+    "@albatrosses/ahui": "^0.0.16",
     "dayjs": "^1.10.4",
     "loadsh": "^0.0.4",
     "react": "^17.0.0",

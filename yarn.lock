@@ -2,25 +2,11 @@
 # yarn lockfile v1
 
 
-"@albatrosses/ahui@^0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@albatrosses/ahui/-/ahui-0.0.12.tgz#b02a8b7e702b9478eae7fc2a1b9f96e61a94e5f5"
-  integrity sha512-X0sO8GAYW+Cj15OPvqi/e6LVj46AIeRaXEBJXoAaqB7BnI0YlLjktG8FGBroljNWPa5sZe9IFSZSMoM6vb2OGw==
+"@albatrosses/ahui@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@albatrosses/ahui/-/ahui-0.0.16.tgz#d3449b906815a6d013065b7fe5217013ede3dd37"
+  integrity sha512-B3uIY9Ix8+Xsy0NOWr6lTr77cU4mhLbUeV/ISARMjBOONSYHEYW3chd2xOGs8ScUS4N1jsMBMxSGpynIacYocA==
   dependencies:
-    dayjs "^1.10.4"
-    loadsh "^0.0.4"
-    react "^17.0.0"
-    react-dom "^17.0.0"
-    react-svg "^14.0.8"
-    sass "^1.42.1"
-    styled-components "^5.2.1"
-
-"@albatrosses/ahui@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@albatrosses/ahui/-/ahui-0.0.13.tgz#ab7e637afb9baabde5f1251b73457ec7aaa638ae"
-  integrity sha512-4UZzFCsAtQI0yOK1BzWkfGYkjbjwhtMksV2Y66VO6Sw8/9QPrFZkCOhlsNqErl2EK0veItueZ+Yi6Xqhp0NVAQ==
-  dependencies:
-    "@albatrosses/ahui" "^0.0.12"
     dayjs "^1.10.4"
     loadsh "^0.0.4"
     react "^17.0.0"
