@@ -1,6 +1,0 @@
-.example {
-  @include theme($theme-content) {
-    box-shadow: themed("shadow-primary");
-    background-color: themed("color-success");
-  }
-}

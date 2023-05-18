@@ -13,12 +13,12 @@
     "incremental": false
   },
   "include": [
-    "./src/assets/fonts",
-    "./src/assets/style",
-    "./src/components/common",
-    "./src/components/mobile",
-    "./src/components/context",
-    "./src/constants",
+    "./src/common/constants",
+    "./src/common/context",
+    "./src/common/fonts",
+    "./src/common/helpers",
+    "./src/common/style",
+    "./src/common/types",
     "./src/index.ts"
   ]
 }
