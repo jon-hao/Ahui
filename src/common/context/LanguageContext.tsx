@@ -1,28 +1,29 @@
 import { createContext, useState } from "react";
-
-type TLanguages = {
-  [key in Language]?: any;
-};
-
-export enum Language {
-  ZHCN = "zh-CN",
-  ENGB = "en-GB",
-}
+import { LanguageToken } from "../constants/languageEnum";
+import { TLanguage } from "../types/languageType";
 
 type TProps = {
   children: React.ReactNode;
-  languages: TLanguages;
+  languages: TLanguage;
+};
+
+type TContext = {
+  language: LanguageToken;
+  setLanguage: (lang: LanguageToken) => void;
+  t: (path: string, param: Record<string, string>[]) => string;
 }
 
-export const LanguageContext = createContext({
-  language: Language.ZHCN,
-} as any);
+export const LanguageContext = createContext<TContext>({
+  language: LanguageToken.ZHCN,
+  setLanguage: () => {},
+  t: () => "",
+});
 
-export const LanguageProvider: React.FC<TProps> = ({
+export const Language: React.FC<TProps> = ({
   children,
-  languages = {} as TLanguages,
+  languages = {} as TLanguage,
 }) => {
-  const [language, setLanguage] = useState(Language.ZHCN);
+  const [language, setLanguage] = useState(LanguageToken.ZHCN);
 
   const t = (path: string, param: Record<string, string>[]) => {
     const context = languages?.[language]?.[path] ?? "";
@@ -42,7 +43,7 @@ export const LanguageProvider: React.FC<TProps> = ({
     <LanguageContext.Provider
       value={{
         language,
-        setLanguage: (lang: Language) => setLanguage(lang),
+        setLanguage: (lang: LanguageToken) => setLanguage(lang),
         t,
       }}
     >

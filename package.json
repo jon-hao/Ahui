@@ -3,7 +3,7 @@
   "version": "0.0.18",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build:app": "tsc && vite build",
     "build:npm": "tsc --build tsconfig.npm.json && cp -r ./src/assets ./lib",
     "lint": "tslint -p . -c ./tslint.json --fix"
   },

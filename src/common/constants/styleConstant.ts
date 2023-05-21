@@ -1,6 +1,7 @@
+import { TContour, TPalette, TRadius, TTypography } from "../types/styleType";
 import { Color, ContourToken, PaletteToken, RadiusToken, Theme, TypographyToken } from "./styleEnum";
 
-export const palette = {
+export const defaultPalette: TPalette = {
   [Theme.Light]: {
     [PaletteToken.BackgroundPrimary]: Color.MysticGray,
     [PaletteToken.ColorPrimary]: Color.CharcoalBlack,
@@ -21,7 +22,7 @@ export const palette = {
   },
 }
 
-export const typography = {
+export const defaultTypography: TTypography = {
   [TypographyToken.Title]: {
     lineHeight: "2.75rem",
     fontSize: "2.125rem",
@@ -54,7 +55,7 @@ export const typography = {
   },
 }
 
-export const contour = {
+export const defaultContour: TContour = {
   [ContourToken.Primary]: {
     shadow: "0px 1px 2px -2px rgba(0, 0, 0, 0.16), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 5px 12px 4px rgba(0, 0, 0, 0.09)",
   },
@@ -66,7 +67,7 @@ export const contour = {
   },
 }
 
-export const radius = {
+export const defaultRadius: TRadius = {
   [RadiusToken.Large]: "0.75rem",
   [RadiusToken.Medium]: "0.5rem",
   [RadiusToken.Small]: "0.25rem",
