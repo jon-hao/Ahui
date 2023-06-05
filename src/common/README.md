@@ -17,7 +17,7 @@ npm install @albatrosses/ahui
 Import `@albatrosses/ahui` and `@albatrosses/ahui/style/index.css` in your root component
 
 ```js
-import {} from "@albatrosses/ahui";
+import { Language } from "@albatrosses/ahui";
 
 const App: React.FC = () => {
   return (

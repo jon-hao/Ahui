@@ -1,8 +1,13 @@
 import { createContext, useState } from "react";
-import { Theme } from "../constants/styleEnum";
 import { ThemeProvider } from "styled-components";
+import { Theme } from "../constants/styleEnum";
 import { TContour, TPalette, TRadius, TTypography } from "../types/styleType";
-import { defaultContour, defaultPalette, defaultRadius, defaultTypography } from "../constants/styleConstant";
+import {
+  defaultContour,
+  defaultPalette,
+  defaultRadius,
+  defaultTypography,
+} from "../constants/styleConstant";
 
 type TProps = {
   children: React.ReactNode;
@@ -11,12 +16,12 @@ type TProps = {
   typography?: TTypography;
   contour?: TContour;
   radius?: TRadius;
-}
+};
 
 type TContext = {
   theme: Theme;
   setTheme: React.Dispatch<React.SetStateAction<Theme>>;
-}
+};
 
 export const AhuiContext = createContext<TContext>({
   theme: Theme.Light,
@@ -37,10 +42,12 @@ export const Ahui: React.FC<TProps> = ({
     <AhuiContext.Provider
       value={{
         theme,
-        setTheme
+        setTheme,
       }}
     >
-      <ThemeProvider theme={{ current: theme, palette, typography, contour, radius }}>
+      <ThemeProvider
+        theme={{ current: theme, palette, typography, contour, radius }}
+      >
         {children}
       </ThemeProvider>
     </AhuiContext.Provider>

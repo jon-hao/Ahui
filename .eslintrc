@@ -1,7 +1,12 @@
 {
-  "extends": ["taro/react"],
+  "extends": ["taro/react", "eslint:recommended", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
   "rules": {
+    "prettier/prettier": "error",
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "import/no-commonjs": "off",
   }
 }

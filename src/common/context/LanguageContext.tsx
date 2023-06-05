@@ -11,7 +11,7 @@ type TContext = {
   language: LanguageToken;
   setLanguage: (lang: LanguageToken) => void;
   t: (path: string, param: Record<string, string>[]) => string;
-}
+};
 
 export const LanguageContext = createContext<TContext>({
   language: LanguageToken.ZHCN,
@@ -29,12 +29,9 @@ export const Language: React.FC<TProps> = ({
     const context = languages?.[language]?.[path] ?? "";
     let result = context;
     if (param) {
-      result = param.reduce(
-        (text, value, key) => {
-          return text.replaceAll(`{{${key}}}`, value);
-        },
-        context
-      );
+      result = param.reduce((text, value, key) => {
+        return text.replaceAll(`{{${key}}}`, value);
+      }, context);
     }
     return result;
   };
