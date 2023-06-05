@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
-import { Ahui } from "@albatrosses/ahui";
-import { Language } from "./common/context/LanguageContext";
+import { Language } from "./ahui/context/LanguageContext";
+import { Ahui } from "./ahui";
 
 const App = ({ children }: PropsWithChildren) => {
   return (

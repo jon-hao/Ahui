@@ -1,5 +1,5 @@
 export default defineAppConfig({
-  pages: ["pages/index/index"],
+  pages: ["pages/chat/chat"],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",
