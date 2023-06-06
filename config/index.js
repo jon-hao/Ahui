@@ -9,7 +9,7 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
-  plugins: [],
+  plugins: ["@tarojs/plugin-html"],
   defineConstants: {},
   copy: {
     patterns: [],
@@ -18,7 +18,7 @@ const config = {
   framework: "react",
   compiler: "webpack5",
   cache: {
-    enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+    enable: true,
   },
   mini: {
     postcss: {
@@ -29,7 +29,7 @@ const config = {
       url: {
         enable: true,
         config: {
-          limit: 1024, // 设定转换尺寸上限
+          limit: 1024,
         },
       },
       cssModules: {

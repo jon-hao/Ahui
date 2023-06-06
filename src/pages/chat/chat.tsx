@@ -1,14 +1,15 @@
-import { View, Text } from "@tarojs/components";
-import { useLoad } from "@tarojs/taro";
+import { View } from "@tarojs/components";
 
-export default function Chat() {
-  useLoad(() => {
-    console.log("Page loaded.");
-  });
+const Chat = () => {
+  const fetchChat = () => {
+    console.log("fetchChat");
+  };
 
   return (
     <View className="chat">
-      <Text>Hello world!PuJunhao</Text>
+      <div onClick={fetchChat}>Hello world!PuJunhao</div>
     </View>
   );
-}
+};
+
+export default Chat;
