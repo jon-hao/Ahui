@@ -1,5 +1,11 @@
-import { render } from 'preact'
-import { App } from './app.tsx'
-import './index.css'
+import './ahui/styles/index.css'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { RouterProvider } from "react-router-dom";
+import router from "./pages/Routes";
 
-render(<App />, document.getElementById('app')!)
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
+)
