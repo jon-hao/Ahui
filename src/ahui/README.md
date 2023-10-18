@@ -14,7 +14,7 @@ npm install @albatrosses/ahui
 ```
 
 ## Usage
-Import `@albatrosses/ahui` and `@albatrosses/ahui/style/index.css` in your root component
+Import `@albatrosses/ahui` and `@albatrosses/ahui/styles/index.css` in your root component
 
 ```js
 import { Language } from "@albatrosses/ahui";

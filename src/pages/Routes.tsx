@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import Economy from "./Economy";
+import Trends from "./trends/Trends";
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Economy />,
+    path: "/trends",
+    element: <Trends />,
   },
   {
-    path: "about",
+    path: "/about",
     element: <div>About</div>,
   },
 ]);
