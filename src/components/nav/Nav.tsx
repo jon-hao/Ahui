@@ -1,4 +1,3 @@
-import React from "react";
 import { NavWrapper } from "./Nav.style"
 
 const Nav = () => {

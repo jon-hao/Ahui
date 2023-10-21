@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PaletteToken, paletteHelper } from "@albatrosses/ahui";
+import { PaletteToken, paletteHelper } from "@albatrosses/ah-kite";
 
 export const PageFrameWrapper = styled.div`
   width: 100%;
