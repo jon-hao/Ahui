@@ -1,17 +1,17 @@
-import '@albatrosses/ah-kite/lib/styles/index.css'
+import 'src/common/assets/styles/index.css'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from "react-router-dom";
 import router from "./pages/Routes";
-import PageFrame from "./components/pageFrame/PageFrame";
-import * as Test from "@albatrosses/ah-kite";
+import PageFrame from "src/components/pageFrame/PageFrame";
+import { AhKite} from 'src/common/contexts/AhKiteContext';
 
 ReactDOM.createRoot(document.getElementById('app')!).render(
   <React.StrictMode>
-    <Test.AhKite>
+    <AhKite>
       <PageFrame>
         <RouterProvider router={router} />
       </PageFrame>
-    </Test.AhKite>
+    </AhKite>
   </React.StrictMode>,
 )
