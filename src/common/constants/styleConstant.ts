@@ -1,6 +1,5 @@
 import { TContour, TPalette, TRadius, TTypography } from "../types/styleType";
 import {
-  Color,
   ContourToken,
   PaletteToken,
   RadiusToken,
@@ -10,22 +9,32 @@ import {
 
 export const defaultPalette: TPalette = {
   [Theme.Light]: {
-    [PaletteToken.BackgroundPrimary]: Color.MysticGray,
-    [PaletteToken.ColorPrimary]: Color.CharcoalBlack,
-    [PaletteToken.ColorSuccess]: Color.EmeraldGreen,
-    [PaletteToken.ColorActive]: Color.SkyBlue,
-    [PaletteToken.ColorSecondary]: Color.AmberOrange,
-    [PaletteToken.ColorImportant]: Color.CrimsonRed,
-    [PaletteToken.ColorDisable]: Color.SlateGray,
+    [PaletteToken.BackgroundPrimary]: "#F4F7FE",
+    [PaletteToken.BackgroundSecondary]: "#FFFFFF",
+    [PaletteToken.FontColorPrimary]: "#2B3674",
+    [PaletteToken.FontColorSecondary]: "#A3AED0",
+    [PaletteToken.ColorPrimary]: "#4318FF",
+    [PaletteToken.ColorSecondary]: "#6AD2FF",
+    [PaletteToken.ColorThird]: "#EFF4FB",
+    [PaletteToken.ColorCorrect]: "#05CD99",
+    [PaletteToken.ColorWarning]: "#FFCE20",
+    [PaletteToken.ColorError]: "#EE5D50",
+    [PaletteToken.ColorPositive]: "#05CD99",
+    [PaletteToken.ColorNegative]: "#EE5D50",
   },
   [Theme.Dark]: {
-    [PaletteToken.BackgroundPrimary]: Color.MidnightBlack,
-    [PaletteToken.ColorPrimary]: Color.PureWhite,
-    [PaletteToken.ColorSuccess]: Color.LimeGreen,
-    [PaletteToken.ColorActive]: Color.FireEngineRed,
-    [PaletteToken.ColorSecondary]: Color.AmberOrange,
-    [PaletteToken.ColorImportant]: Color.CrimsonRed,
-    [PaletteToken.ColorDisable]: Color.SlateGray,
+    [PaletteToken.BackgroundPrimary]: "#0B1437",
+    [PaletteToken.BackgroundSecondary]: "#111C44",
+    [PaletteToken.FontColorPrimary]: "#FFFFFF",
+    [PaletteToken.FontColorSecondary]: "#A3AED0",
+    [PaletteToken.ColorPrimary]: "#4318FF",
+    [PaletteToken.ColorSecondary]: "#6AD2FF",
+    [PaletteToken.ColorThird]: "#EFF4FB",
+    [PaletteToken.ColorCorrect]: "#05CD99",
+    [PaletteToken.ColorWarning]: "#FFCE20",
+    [PaletteToken.ColorError]: "#EE5D50",
+    [PaletteToken.ColorPositive]: "#05CD99",
+    [PaletteToken.ColorNegative]: "#EE5D50",
   },
 };
 

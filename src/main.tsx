@@ -1,12 +1,12 @@
-import 'src/common/assets/styles/index.css'
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import "src/common/assets/styles/index.css"
+import { AhKite} from "src/common";
+import React from "react"
+import ReactDOM from "react-dom/client"
 import { RouterProvider } from "react-router-dom";
 import router from "./pages/Routes";
 import PageFrame from "src/components/pageFrame/PageFrame";
-import { AhKite} from 'src/common/contexts/AhKiteContext';
 
-ReactDOM.createRoot(document.getElementById('app')!).render(
+ReactDOM.createRoot(document.getElementById("app")!).render(
   <React.StrictMode>
     <AhKite>
       <PageFrame>

@@ -1,14 +1,19 @@
 import React from "react";
-import { ContentWrapper, NavWrapper, PageFrameWrapper } from "./PageFrame.style";
-import Nav from "../nav/Nav"
+import { ContentWrapper, PageFrameWrapper, PageTitle } from "./PageFrame.style";
+import Nav from "./components/nav/Nav"
+import BreadCrumbs from "./components/breadCrumbs/BreadCrumbs";
+import Tools from "./components/tools/Tools";
 
 const PageFrame: React.FC<any> = ({ children }) => {
   return (
     <PageFrameWrapper>
-      <NavWrapper>
-        <Nav />
-      </NavWrapper>
-      <ContentWrapper>{children}</ContentWrapper>
+      <Nav />
+      <ContentWrapper>
+        <BreadCrumbs />
+        <PageTitle>PageTitle</PageTitle>
+        <Tools />
+        {children}
+      </ContentWrapper>
     </PageFrameWrapper>
   )
 }

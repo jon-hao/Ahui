@@ -1,5 +1,4 @@
 import {
-  Color,
   ContourToken,
   PaletteToken,
   RadiusToken,
@@ -8,7 +7,7 @@ import {
 import { TStyleProps } from "../types/styleType";
 
 export const paletteHelper = (paletteToken: PaletteToken): any => {
-  return (props: TStyleProps): Color | string => {
+  return (props: TStyleProps): string => {
     return props.theme.palette[props.theme.current][paletteToken];
   };
 };

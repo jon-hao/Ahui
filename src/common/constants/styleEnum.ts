@@ -5,12 +5,17 @@ export enum Theme {
 
 export enum PaletteToken {
   BackgroundPrimary = "backgroundPrimary",
+  BackgroundSecondary = "backgroundSecondary",
+  FontColorPrimary = "fontColorPrimary",
+  FontColorSecondary = "fontColorSecondary",
   ColorPrimary = "colorPrimary",
-  ColorSuccess = "colorSuccess",
-  ColorActive = "colorActive",
   ColorSecondary = "colorSecondary",
-  ColorImportant = "colorImportant",
-  ColorDisable = "colorDisable",
+  ColorThird = "colorThird",
+  ColorCorrect = "colorCorrect",
+  ColorWarning = "colorWarning",
+  ColorError = "colorError",
+  ColorPositive = "colorPositive",
+  ColorNegative = "colorNegative",
 }
 
 export enum TypographyToken {
@@ -44,21 +49,4 @@ export enum Media {
   Desktop = "@media (min-width: 1025px)",
   Tablet = "@media (min-width: 768px) and (max-width: 1024px)",
   Mobile = "@media (max-width: 767px)",
-}
-
-export enum Color {
-  MysticGray = "#F5F5F7",
-  CharcoalBlack = "#212121",
-  EmeraldGreen = "#07C160",
-  SkyBlue = "#2C9AFC",
-  AmberOrange = "#FF9F0A",
-  CrimsonRed = "#F26A6D",
-  SlateGray = "#8C8C8C",
-  MidnightBlack = "#000000",
-  PureWhite = "#FFFFFF",
-  LimeGreen = "#00FF00",
-  FireEngineRed = "#FF0000",
-  RoyalBlue = "#0000FF",
-  Magenta = "#FF00FF",
-  SilverGray = "#CCCCCC",
 }

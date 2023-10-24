@@ -1,5 +1,4 @@
 import {
-  Color,
   ContourToken,
   PaletteToken,
   RadiusToken,
@@ -7,7 +6,7 @@ import {
   TypographyToken,
 } from "../constants/styleEnum";
 
-export type TPalette = Record<Theme, Record<PaletteToken, Color | string>>;
+export type TPalette = Record<Theme, Record<PaletteToken, string>>;
 
 export type TTypography = Record<
   TypographyToken,
