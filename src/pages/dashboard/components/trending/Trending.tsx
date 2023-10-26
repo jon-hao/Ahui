@@ -1,38 +1,40 @@
 import React from "react";
-import Magnet from "src/components/magnet/Magnet";
-import { TrendingWrapper } from "./Trending.style";
-import { useQuery } from "src/common";
+import { DASH, Geo, useQuery } from "src/common";
+import dayjs from "dayjs";
+import { DATE_FORMAT } from "src/common/constants/dateEnum";
+import { FlagIcon, NationalWrapper, TrendingCategory, TrendingDetailsWrapper, TrendingHeat, TrendingKeyword, TrendingWrapper } from "./Trending.style";
 
-const Trending: React.FC = () => {
-  const [data, loading] = useQuery("http://localhost:3000/trends/daily", {
+type TProps = {
+  geo: Geo;
+}
+
+const Trending: React.FC<TProps> = ({ geo }) => {
+  const [data, loading] = useQuery("http://localhost:3000/trends/realtime", {
     query: {
-      country: "US",
-      date: "2023-10-25"
+      geo,
+      date: dayjs().format(DATE_FORMAT),
     }
   });
-
-  const renderSkeleton = () => {
-    return (
-      <>
-        {Array(6).fill(1).map((_, key) => <Magnet key={key} loading={true} />)}
-      </>
-    )
-  }
-
-  const renderTrending = () => {
-    return (
-      <>
-        {data.trends.slice(0, 6).map((item: any, key: number) => {
-          return <Magnet key={key}>{item.title.query}</Magnet>
-        })}
-      </>
-    )
-  }
+  const trend = data?.trends?.[0] ?? {}
 
   return (
-    <TrendingWrapper>
-      {loading && renderSkeleton()}
-      {!loading && renderTrending()}
+    <TrendingWrapper className={loading ? "loading" : ""} onClick={() => {
+      if (!loading && trend.detail) {
+        window.open(trend.detail, '_blank');
+      }
+    }}>
+      {!loading && (
+        <>
+          <NationalWrapper>
+            <FlagIcon src={`src/common/assets/images/flags/${geo}.png`} />
+          </NationalWrapper>
+          <TrendingDetailsWrapper>
+            <TrendingCategory>{"All"}</TrendingCategory>
+            <TrendingKeyword>{trend.keyword ?? DASH}</TrendingKeyword>
+            <TrendingHeat>{DASH}</TrendingHeat>
+          </TrendingDetailsWrapper>
+        </>
+      )}
     </TrendingWrapper>
   )
 }

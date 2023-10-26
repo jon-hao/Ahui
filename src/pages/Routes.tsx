@@ -1,20 +1,18 @@
-import { createBrowserRouter } from "react-router-dom";
 import Trends from "./trends/Trends";
 import Dashboard from "./dashboard/Dashboard";
+import { TRoute } from "src/common";
 
-const router = createBrowserRouter([
+const routes: TRoute[] = [
   {
+    name: "Dashboard",
     path: "/",
-    element: <Dashboard />
+    component: <Dashboard />
   },
   {
+    name: "Trends",
     path: "/trends",
-    element: <Trends />,
+    component: <Trends />
   },
-  {
-    path: "/about",
-    element: <div>About</div>,
-  },
-]);
+];
 
-export default router;
+export default routes;

@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ContentWrapper, PageFrameWrapper, PageTitle } from "./PageFrame.style";
 import Nav from "./components/nav/Nav"
 import BreadCrumbs from "./components/breadCrumbs/BreadCrumbs";
 import Tools from "./components/tools/Tools";
+import { RouterContext } from "src/common";
 
-const PageFrame: React.FC<any> = ({ children }) => {
+const PageFrame: React.FC = () => {
+  const { route } = useContext(RouterContext);
+  
   return (
     <PageFrameWrapper>
       <Nav />
       <ContentWrapper>
         <BreadCrumbs />
-        <PageTitle>PageTitle</PageTitle>
+        <PageTitle>{route?.name ?? "Page Not Found"}</PageTitle>
         <Tools />
-        {children}
+        {route?.component}
       </ContentWrapper>
     </PageFrameWrapper>
   )

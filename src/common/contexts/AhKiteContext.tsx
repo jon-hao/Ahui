@@ -1,5 +1,6 @@
 import React from "react";
 import { createContext, useState } from "react";
+import { RouterProvider } from "./RouterContext";
 import { ThemeProvider } from "styled-components";
 import { Theme } from "../constants/styleEnum";
 import { TContour, TPalette, TRadius, TTypography } from "../types/styleType";
@@ -9,6 +10,7 @@ import {
   defaultRadius,
   defaultTypography,
 } from "../constants/styleConstant";
+import { TRoute } from "../constants/routerEnum";
 
 type TProps = {
   children: React.ReactNode;
@@ -17,6 +19,7 @@ type TProps = {
   typography?: TTypography;
   contour?: TContour;
   radius?: TRadius;
+  routes?: TRoute[];
 };
 
 type TContext = {
@@ -36,6 +39,7 @@ export const AhKite: React.FC<TProps> = ({
   typography = defaultTypography,
   contour = defaultContour,
   radius = defaultRadius,
+  routes = []
 }) => {
   const [theme, setTheme] = useState(defaultTheme);
 
@@ -46,11 +50,13 @@ export const AhKite: React.FC<TProps> = ({
         setTheme,
       }}
     >
-      <ThemeProvider
-        theme={{ current: theme, palette, typography, contour, radius }}
-      >
-        {children}
-      </ThemeProvider>
+      <RouterProvider routes={routes}>
+        <ThemeProvider
+          theme={{ current: theme, palette, typography, contour, radius }}
+        >
+          {children}
+        </ThemeProvider>
+      </RouterProvider>
     </AhKiteContext.Provider>
   );
 };

@@ -1,9 +1,12 @@
+import { RouterContext } from "src/common";
 import { NavWrapper } from "./Nav.style"
+import React, { useContext } from "react";
 
-const Nav = () => {
+const Nav: React.FC = () => {
+  const { routes } = useContext(RouterContext);
   return (
     <NavWrapper>
-      Nav
+      {routes.map((item, key) => <div key={key}>{item.name}</div>)}
     </NavWrapper>
   )
 }

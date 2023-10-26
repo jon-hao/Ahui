@@ -6,6 +6,4 @@ export const DashboardWrapper = styled.div`
   }
 `;
 
-export const TrendingWrapper = styled.section``;
-
 export const PlaceHolderWrapper = styled.section``;

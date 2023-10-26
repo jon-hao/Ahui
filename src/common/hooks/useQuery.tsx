@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { TRequest, fetchData } from "src/common";
 
-const useQuery: React.FC<any> = (endpoint: string, option?: TRequest) => {
+const useQuery = (endpoint: string, option?: TRequest): [data: any, loading: boolean] => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState<boolean>(true);
   const fetchOriginData = async () => {
