@@ -1,17 +1,19 @@
 import Trends from "./trends/Trends";
 import Dashboard from "./dashboard/Dashboard";
-import { TRoute } from "src/common";
+import { Icon, TRoute } from "src/common";
 
 const routes: TRoute[] = [
   {
     name: "Dashboard",
     path: "/",
-    component: <Dashboard />
+    component: <Dashboard />,
+    icon: <Icon iconName="dashboard" />
   },
   {
     name: "Trends",
     path: "/trends",
-    component: <Trends />
+    component: <Trends />,
+    icon: <Icon iconName="trends" />
   },
 ];
 

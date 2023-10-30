@@ -1,19 +1,16 @@
-import React from "react";
-import { IconName } from "../../constants/IconEnum";
-import { ReactSVG } from 'react-svg'
-import DarkMode from "../../assets/icons/dark-mode.svg";
-
-const icons = {
-  [IconName.DarkMode]: DarkMode
-}
+import React, { useContext } from "react";
+import { IconWrapper } from "./Icon.style";
+import { AhKiteContext } from "src/common/contexts/AhKiteContext";
 
 type TProps = {
-  iconName: IconName,
-  onClick: () => void
+  className?: string,
+  iconName: string,
+  onClick?: () => void
 }
 
-const Icon: React.FC<TProps> = ({ iconName, onClick }) => {
-  return <ReactSVG src={icons[iconName]} onClick={onClick} />
+const Icon: React.FC<TProps> = ({ className, iconName, onClick }) => {
+  const { icons } = useContext(AhKiteContext);
+  return <IconWrapper className={className} src={icons?.[iconName] ?? 'default'} onClick={onClick} width={24} height={24} />
 }
 
 export default Icon;

@@ -1,12 +1,21 @@
 import { RouterContext } from "src/common";
-import { NavWrapper } from "./Nav.style"
+import { Logo, NavWrapper, Navigate, Navigates } from "./Nav.style"
 import React, { useContext } from "react";
 
 const Nav: React.FC = () => {
-  const { routes } = useContext(RouterContext);
+  const { route, routes, navigate } = useContext(RouterContext);
+
   return (
     <NavWrapper>
-      {routes.map((item, key) => <div key={key}>{item.name}</div>)}
+      <Logo>ALBATROSSES</Logo>
+      <Navigates>
+        {routes.map((item, key) => (
+          <Navigate key={key} className={item.name === route?.name ? "active" : ""} onClick={() => navigate(item.name)}>
+            {item.icon}
+            {item.name}
+          </Navigate>
+        ))}
+      </Navigates>
     </NavWrapper>
   )
 }

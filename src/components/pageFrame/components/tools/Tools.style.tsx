@@ -8,7 +8,13 @@ export const ToolsWrapper = styled.div`
   right: 1.5rem;
   top: 4rem;
   padding: 0.64rem;
+  cursor: pointer;
   svg {
-    cursor: pointer;
+    fill: ${paletteHelper(PaletteToken.FontColorSecondary)};
+    stroke: ${paletteHelper(PaletteToken.FontColorSecondary)};
+  }
+  .dark svg {
+    fill: ${paletteHelper(PaletteToken.FontColorPrimary)};
+    stroke: ${paletteHelper(PaletteToken.FontColorPrimary)};
   }
 `;

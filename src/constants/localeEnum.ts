@@ -7,11 +7,6 @@ export enum Geo {
   AU = "AU", // 澳大利亚
 }
 
-export enum Language {
-  EN = "en-US",
-  ZH = "zh-CN"
-}
-
 export enum TrendsCategory {
   All = "all",
   Health = "m",

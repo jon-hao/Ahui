@@ -1,7 +1,7 @@
 import React from "react";
 import { TrendsWrapper } from "./Trends.style";
 import Trending from "../trending/Trending";
-import { Geo } from "src/common";
+import { Geo } from "src/constants/localeEnum";
 
 const Trends: React.FC = () => {
   return (

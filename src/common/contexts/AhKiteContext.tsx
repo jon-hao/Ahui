@@ -20,16 +20,19 @@ type TProps = {
   contour?: TContour;
   radius?: TRadius;
   routes?: TRoute[];
+  icons?: Record<string, string>;
 };
 
 type TContext = {
   theme: Theme;
   setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+  icons: Record<string, string>;
 };
 
 export const AhKiteContext = createContext<TContext>({
   theme: Theme.Light,
   setTheme: () => {},
+  icons: {}
 });
 
 export const AhKite: React.FC<TProps> = ({
@@ -39,7 +42,8 @@ export const AhKite: React.FC<TProps> = ({
   typography = defaultTypography,
   contour = defaultContour,
   radius = defaultRadius,
-  routes = []
+  routes = [],
+  icons = {}
 }) => {
   const [theme, setTheme] = useState(defaultTheme);
 
@@ -48,6 +52,7 @@ export const AhKite: React.FC<TProps> = ({
       value={{
         theme,
         setTheme,
+        icons,
       }}
     >
       <RouterProvider routes={routes}>

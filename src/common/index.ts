@@ -4,22 +4,6 @@ export * from "./contexts/AhKiteContext";
 // Locale
 export * from "./contexts/LanguageContext";
 export * from "./constants/languageEnum";
-export * from "./constants/localeEnum";
-
-// Components
-import Icon from "./components/icon/Icon";
-export {
-  Icon
-};
-export {
-  IconName
-} from "./constants/IconEnum";
-
-// Hooks
-import useQuery from "./hooks/useQuery";
-export {
-  useQuery
-};
 
 // Styles
 export * from "./constants/styleEnum";
@@ -36,3 +20,15 @@ export * from "./contexts/RouterContext";
 
 // character
 export * from "./constants/character";
+
+// Hooks
+import useQuery from "./hooks/useQuery";
+export {
+  useQuery
+};
+
+// Components
+import Icon from "./components/icon/Icon";
+export {
+  Icon
+};

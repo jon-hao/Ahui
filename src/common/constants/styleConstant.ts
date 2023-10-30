@@ -42,22 +42,22 @@ export const defaultTypography: TTypography = {
   [TypographyToken.Title]: {
     lineHeight: "2.75rem",
     fontSize: "2.125rem",
-    fontWeight: "500",
+    fontWeight: "600",
   },
   [TypographyToken.SubTitle]: {
     lineHeight: "2.25rem",
     fontSize: "1.5rem",
-    fontWeight: "500",
+    fontWeight: "600",
   },
   [TypographyToken.Tab]: {
     lineHeight: "1.75rem",
     fontSize: "1.25rem",
-    fontWeight: "500",
+    fontWeight: "600",
   },
   [TypographyToken.Label]: {
     lineHeight: "1.5rem",
     fontSize: "1rem",
-    fontWeight: "300",
+    fontWeight: "600",
   },
   [TypographyToken.Content]: {
     lineHeight: "1.5rem",
