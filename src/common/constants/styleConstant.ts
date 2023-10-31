@@ -57,7 +57,7 @@ export const defaultTypography: TTypography = {
   [TypographyToken.Label]: {
     lineHeight: "1.5rem",
     fontSize: "1rem",
-    fontWeight: "600",
+    fontWeight: "300",
   },
   [TypographyToken.Content]: {
     lineHeight: "1.5rem",

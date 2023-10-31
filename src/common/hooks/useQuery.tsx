@@ -1,21 +1,27 @@
-import { useEffect, useState } from "react";
+import { useDeferredValue, useEffect, useState } from "react";
 import { TRequest, fetchData } from "src/common";
 
-const useQuery = (endpoint: string, option?: TRequest): [data: any, loading: boolean] => {
-  const [data, setData] = useState(null);
+const useQuery = (endpoint: string, option?: TRequest): [data: any, { fetchData: () => Promise<void>, loading: boolean, firstLoading: boolean }] => {
+  const [originData, setData] = useState(null);
   const [loading, setLoading] = useState<boolean>(true);
+  const [firstLoading, setFirstLoading] = useState<boolean>(true);
+  const data = useDeferredValue(originData);
+
   const fetchOriginData = async () => {
     setLoading(true);
     const result = await fetchData(endpoint, option);
     setData(result);
     setLoading(false);
+    if (firstLoading) {
+      setFirstLoading(false)
+    }
   }
 
   useEffect(() => {
-    fetchOriginData()
+    fetchOriginData();
   }, [])
 
-  return [data, loading]
+  return [data, { fetchData: fetchOriginData, loading, firstLoading }]
 }
 
 export default useQuery;

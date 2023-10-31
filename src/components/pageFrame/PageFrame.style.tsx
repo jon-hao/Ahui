@@ -14,7 +14,7 @@ export const ContentWrapper = styled.div`
   padding: 50px 20px 30px 30px;
 `;
 
-export const PageTitle = styled.h1`
+export const PageTitle = styled.h2`
   ${typographyHelp(TypographyToken.Title)};
   margin-bottom: 2rem;
 `

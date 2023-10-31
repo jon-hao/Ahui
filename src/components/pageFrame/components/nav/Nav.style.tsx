@@ -31,6 +31,7 @@ export const Navigate = styled.div`
   box-sizing: border-box;
   cursor: pointer;
   ${typographyHelp(TypographyToken.Label)};
+  font-weight: 600;
   svg {
     stroke: ${paletteHelper(PaletteToken.FontColorSecondary)};
   }

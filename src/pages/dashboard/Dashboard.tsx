@@ -1,13 +1,12 @@
-import { DashboardWrapper, PlaceHolderWrapper } from "./Dashboard.style";
+import { DashboardWrapper } from "./Dashboard.style";
+import Securities from "./components/securities/Securities";
 import Trends from "./components/trends/Trends";
 
 const Dashboard:React.FC = () => {
   return (
     <DashboardWrapper>
       <Trends />
-      <PlaceHolderWrapper>PlaceHolderWrapper1</PlaceHolderWrapper>
-      <PlaceHolderWrapper>PlaceHolderWrapper2</PlaceHolderWrapper>
-      <PlaceHolderWrapper>PlaceHolderWrapper3</PlaceHolderWrapper>
+      <Securities />
     </DashboardWrapper>
   );
 }

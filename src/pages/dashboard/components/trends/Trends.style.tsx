@@ -4,5 +4,5 @@ export const TrendsWrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1.25rem;
-  min-height: 6rem;
+  height: 6rem;
 `;

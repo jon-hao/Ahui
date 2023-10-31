@@ -5,5 +5,3 @@ export const DashboardWrapper = styled.div`
     margin-bottom: 1.5rem;
   }
 `;
-
-export const PlaceHolderWrapper = styled.section``;

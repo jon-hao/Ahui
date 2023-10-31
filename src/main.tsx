@@ -3,7 +3,7 @@ import { AhKite} from "src/common";
 import ReactDOM from "react-dom/client"
 import PageFrame from "src/components/pageFrame/PageFrame";
 import routes from "./pages/Routes";
-import { icons } from "./constants/iconConstants";
+import { icons } from "./constants/iconConstant";
 
 ReactDOM.createRoot(document.getElementById("app")!).render(
   <AhKite routes={routes} icons={icons}>

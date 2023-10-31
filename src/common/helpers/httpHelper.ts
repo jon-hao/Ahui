@@ -1,9 +1,9 @@
 import { TRequest } from "../types/httpType";
 
-export const fetchData = async <T = any>(
+export const fetchData = async (
   uri: string,
   options: Partial<TRequest> = {}
-): Promise<T> => {
+): Promise<any> => {
   try {
     let url = uri;
     const fetchOption: RequestInit = {};
@@ -39,6 +39,7 @@ export const fetchData = async <T = any>(
     const result = await fetch(url, fetchOption);
 
     return result.json();
+    return {};
   } catch (e) {
     throw e;
   }

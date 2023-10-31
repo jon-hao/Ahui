@@ -8,6 +8,7 @@ export const TrendingWrapper = styled.div`
   padding: 1rem 1.5rem 0.8rem 1.5rem;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   &:not(.loading) {
     cursor: pointer;
     transition: transform 0.3s;
@@ -44,19 +45,28 @@ export const TrendingDetailsWrapper = styled.div`
 `;
 
 export const TrendingCategory = styled.span`
-  ${typographyHelp(TypographyToken.Label)};
+  ${typographyHelp(TypographyToken.Tips)};
   color: ${paletteHelper(PaletteToken.FontColorSecondary)};
   align-self: flex-end;
 `;
 
-export const TrendingKeyword = styled.h3`
-  ${typographyHelp(TypographyToken.Tab)};
+export const TrendingKeyword = styled.h5`
+  ${typographyHelp(TypographyToken.Content)};
   color: ${paletteHelper(PaletteToken.FontColorPrimary)};
   align-self: flex-start;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
 `;
 
 export const TrendingHeat = styled.span`
-  ${typographyHelp(TypographyToken.Label)};
+  ${typographyHelp(TypographyToken.Tips)};
+  font-size: 0.6rem;
   color: ${paletteHelper(PaletteToken.FontColorSecondary)};
   align-self: flex-start;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  width: 100%;
 `;
