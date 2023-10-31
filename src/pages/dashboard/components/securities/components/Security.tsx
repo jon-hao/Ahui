@@ -12,9 +12,8 @@ const Security: React.FC<TProps> = ({ code }) => {
       code
     }
   })
-  console.log("pujunhao: ", data);
   useEffect(() => {
-    
+
   }, [])
   return (
     <SecurityWrapper className={firstLoading ? "loading" : ""}>
