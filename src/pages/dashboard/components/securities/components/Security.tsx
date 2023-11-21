@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { SecurityWrapper } from "./Security.style";
 import { useQuery } from "src/common";
+import Candle from "src/components/candle/Candle";
 
 type TProps = {
   code: string;
@@ -18,7 +19,7 @@ const Security: React.FC<TProps> = ({ code }) => {
   return (
     <SecurityWrapper className={firstLoading ? "loading" : ""}>
       {!firstLoading && (
-        <div>{JSON.stringify(data)}</div>
+        <Candle />
       )}
     </SecurityWrapper>
   )
