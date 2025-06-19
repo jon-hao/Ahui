@@ -5,17 +5,13 @@ export enum Stage {
 
 export enum Domain {
   AI = "ai",
-  Economy = "Economy",
-  Trends = "Trends"
+  Data = "Data"
 }
 
 const config = {
   [Stage.Dev]: {
-    [Domain.Trends]: {
-      realtime: "http://localhost:3000/trends/realtime"
-    },
-    [Domain.Economy]: {
-      stockCandle: "http://localhost:3000/economy/stock-candle"
+    [Domain.Data]: {
+      marketSentiment: "http://localhost:3000/data/market-sentiment"
     }
   },
   [Stage.Prod]: {}
