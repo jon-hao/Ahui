@@ -10,7 +10,7 @@ const PageFrame: React.FC = () => {
   
   return (
     <PageFrameWrapper>
-      {/* <Nav /> */}
+      <Nav />
       <ContentWrapper>
         <BreadCrumbs />
         <PageTitle>{route?.name ?? "Page Not Found"}</PageTitle>

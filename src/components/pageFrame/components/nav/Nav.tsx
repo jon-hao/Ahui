@@ -7,7 +7,7 @@ const Nav: React.FC = () => {
 
   return (
     <NavWrapper>
-      <Logo>ALBATROSSES</Logo>
+      <Logo>Capitalism</Logo>
       <Navigates>
         {routes.map((item, key) => (
           <Navigate key={key} className={item.name === route?.name ? "active" : ""} onClick={() => navigate(item.name)}>
