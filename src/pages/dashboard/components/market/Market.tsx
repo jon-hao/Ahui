@@ -1,6 +1,6 @@
 import React from "react";
 import { MarketWrapper } from "./Market.style";
-import { useQuery } from "src/common";
+import { useQuery } from "@jon-hao/ahkite";
 import getConfig, { Domain } from "src/config";
 
 const Market: React.FC = () => {

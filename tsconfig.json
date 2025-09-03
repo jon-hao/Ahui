@@ -6,6 +6,10 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "baseUrl": "./",
+    "paths": {
+      "@jon-hao/ahkite": ["src/common"],
+      "@jon-hao/ahkite/*": ["src/common/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",

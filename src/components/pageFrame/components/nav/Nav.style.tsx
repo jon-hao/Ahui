@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PaletteToken, TypographyToken, paletteHelper, typographyHelp } from "src/common";
+import { PaletteToken, TypographyToken, paletteHelper, typographyHelp } from "@jon-hao/ahkite";
 
 export const NavWrapper = styled.div`
   flex: 0 0 15rem;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PaletteToken, RadiusToken, paletteHelper, radiusHelp } from "src/common";
+import { PaletteToken, RadiusToken, paletteHelper, radiusHelp } from "@jon-hao/ahkite";
 
 export const ToolsWrapper = styled.div`
   background-color: ${paletteHelper(PaletteToken.BackgroundSecondary)};

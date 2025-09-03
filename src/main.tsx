@@ -1,5 +1,5 @@
-import "src/common/assets/styles/index.css"
-import { AhKite} from "src/common";
+import "@jon-hao/ahkite/assets/styles/index.css"
+import { AhKite } from "@jon-hao/ahkite";
 import ReactDOM from "react-dom/client"
 import PageFrame from "src/components/pageFrame/PageFrame";
 import routes from "./pages/Routes";

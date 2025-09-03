@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AhKiteContext, Icon, Theme } from "src/common";
+import { AhKiteContext, Icon, Theme } from "@jon-hao/ahkite";
 import { ToolsWrapper } from "./Tools.style";
 
 const Tools: React.FC = () => {

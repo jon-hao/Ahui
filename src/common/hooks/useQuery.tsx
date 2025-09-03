@@ -1,5 +1,5 @@
 import { useDeferredValue, useEffect, useState } from "react";
-import { TRequest, fetchData } from "src/common";
+import { TRequest, fetchData } from "@jon-hao/ahkite";
 
 const useQuery = (endpoint: string, option?: TRequest): [data: any, { fetchData: () => Promise<void>, loading: boolean, firstLoading: boolean }] => {
   const [originData, setData] = useState(null);

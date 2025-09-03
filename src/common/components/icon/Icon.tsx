@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { IconWrapper } from "./Icon.style";
-import { AhKiteContext } from "src/common/contexts/AhKiteContext";
+import { AhKiteContext } from "../../contexts/AhKiteContext";
 
 type TProps = {
   className?: string,

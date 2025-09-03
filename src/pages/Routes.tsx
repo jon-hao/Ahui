@@ -1,6 +1,6 @@
 import Trends from "./trends/Trends";
 import Dashboard from "./dashboard/Dashboard";
-import { Icon, TRoute } from "src/common";
+import { Icon, TRoute } from "@jon-hao/ahkite";
 
 const routes: TRoute[] = [
   {
