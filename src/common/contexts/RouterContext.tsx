@@ -99,19 +99,25 @@ export const RouterProvider: React.FC<TProps> = ({ routes, children }) => {
       qs = defaultQs,
       param = defaultParam,
     } = navigateParam;
-    const curPathname = pathname || findRoutePath(routes, name!);
-    const finalPathname = param.reduce(
-      (text, value, key) => {
-        return text.replace(new RegExp(`:${key}`, "g"), value);
+    let curPathname = window.location.pathname
+    if (name) {
+      curPathname = findRoutePath(routes, name)
+    }
+    if (pathname) {
+      curPathname = pathname
+    }
+    const finalPathname = Object.keys(param).reduce(
+      (text, key) => {
+        return text.replace(new RegExp(`:${key}`, "g"), param[key]);
       },
       curPathname
     );
-    const search = qs.reduce(
-      (curSearch, value, key) => {
+    const search = Object.keys(qs).reduce(
+      (curSearch, key) => {
         if (!curSearch.includes("?")) {
-          return `${curSearch}?${key}=${value}`;
+          return `${curSearch}?${key}=${qs[key]}`;
         }
-        return `${curSearch}&${key}=${value}`;
+        return `${curSearch}&${key}=${qs[key]}`;
       },
       ""
     );

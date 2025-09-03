@@ -4,18 +4,33 @@ import { PaletteToken, TypographyToken, paletteHelper, typographyHelp } from "@j
 export const NavWrapper = styled.div`
   flex: 0 0 15rem;
   background-color: ${paletteHelper(PaletteToken.BackgroundSecondary)};
+  &.closed {
+    flex: 0 0 3.5rem;
+  }
 `;
 
-export const Logo = styled.h1`
-  ${typographyHelp(TypographyToken.SubTitle)};
-  font-family: Poppins;
-  font-weight: 700;
-  margin: 3.5rem auto;
-  text-align: center;
+export const Logo = styled.div`
+  ${typographyHelp(TypographyToken.Label)};
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  & > * {
+    margin-right: 0.75rem;
+  }
+  &.closed {
+    & > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0;
+    }
+  }
 `;
 
 export const Navigates = styled.div`
-  margin-top: 2rem;
+  margin-top: 1rem;
   & > div:not(:last-child) {
     margin-bottom: 1.25rem;
   }
@@ -44,5 +59,13 @@ export const Navigate = styled.div`
   }
   & > * {
     margin-right: 0.75rem;
+  }
+  &.closed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > * {
+      margin-right: 0;
+    }
   }
 `;
